@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practical-8</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        #container {
+            background-color: white;
+
+
+            height: 100%;
+            border-radius: 10px;
+            border: solid lightgrey 10px;
+            ;
+            width: 1200px;
+            margin: 0px auto;
+            padding: 15px;
+        }
+
+        #header {
+            position: sticky;
+            top: 0;
+            margin-bottom: 10px;
+            background-color: grey;
+            text-align: center;
+            color: white;
+            height: 70px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 36px;
+            z-index: 4;
+        }
+
+        .nav li {
+            display: inline;
+            margin: 10px;
+
+        }
+
+        .nav li a {
+            color: white;
+            text-decoration: none;
+            height: 100%;
+            padding: 20px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .nav li a:hover {
+            color: black;
+            background-color: white;
+            /*font-weight: bolder;*/
+            /* transition: 2s; */
+            /* box-shadow:5px 5px 5px 5px black;     */
+        }
+
+        #banner {
+            background-color: skyblue;
+            color: white;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+            height: 600px;
+            width: 100%;
+            display: flex;
+            /*
+            justify-content: center;
+            align-items: center;*/
+            font-size: 30px;
+
+        }
+
+        #banner img {
+            position: absolute;
+            height: 600px;
+            width: 1200px;
+            z-index: 1;
+        }
+
+        #banner h1 {
+            position: absolute;
+            z-index: 2;
+            text-align: left;
+        }
+
+        #section-1 {
+            text-align: center;
+            font-size: 36px;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background-color: white;
+            height: 70px;
+            width: 100%;
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        #sectionTag {
+            /*float: left;*/
+            margin-left: 50px;
+            margin-right: 50px;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+        }
+
+        #sectionTag img {
+            height: 180px;
+            width: 180px;
+            border-radius: 50%;
+        }
+
+        #firstCircle {
+            /*background-color: yellow;*/
+            height: 180px;
+            width: 180px;
+            border-radius: 50%;
+            margin-left: 60px;
+            margin-right: 40px;
+        }
+
+        #secCircle {
+            background-color: yellow;
+            height: 180px;
+            width: 180px;
+            border-radius: 50%;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+
+        #thirdCircle {
+            background-color: yellow;
+            height: 180px;
+            width: 180px;
+            border-radius: 50%;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+
+        #forthCircle {
+            background-color: yellow;
+            height: 180px;
+            width: 180px;
+            border-radius: 50%;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+
+    
+        .section-2 {
+            
+            margin-top: 50px;
+            margin-right: 10px;
+            margin-left: 10px;
+            margin-bottom: 50px;
+            
+        }
+
+        .section-2:after {
+            content: ' ';
+            display: block;
+            clear: both;
+        }
+
+        .left-side {
+            width: 50%;
+            background-color: gray;
+            height: 800px;
+            padding: 5px;
+            float: left;
+            font-size: 30px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .right-side {
+            width: 48%;
+            height: 800px;
+            /* border: 2px solid green; */
+            float: right;
+            font-size: 40px;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .articles {
+            height: 263px;
+            width: 100%;
+            margin-bottom: 8px;
+            font-weight: bold;
+            text-align: center;
+            float: right;
+            font-size: 30px;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #section-3 {
+            height: 70px;
+            width: 100%;
+            background-color: white;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        #sectionTag-3 {
+            margin-left: 50px;
+            margin-right: 40px;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+        }
+
+        #block-1 {
+            height: 400px;
+            width: 300px;
+            background-color: lightgray;
+            margin-right: 20px;
+            border-radius: 4px;
+        }
+
+        #block-2 {
+            height: 400px;
+            width: 300px;
+            background-color:lightgray;
+            margin-right: 20px;
+            border-radius: 4px;
+        }
+
+        #block-3 {
+            height: 400px;
+            width: 300px;
+            background-color: lightgray;
+            margin-right: 20px;
+            border-radius: 4px;
+        }
+
+        #block-4 {
+            height: 400px;
+            width: 300px;
+            background-color: lightgray;
+            margin-right: 20px;
+            border-radius: 4px;
+        }
+
+        #sectionTag-3 a {
+            display: block;
+            color: white;
+            background-color: red;
+            padding-top: 10px;
+            text-align: center;
+            width: 100%;
+            height: 30px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        #sectionTag-3 a:hover {
+            background-color: green;
+        }
+
+        #sectionTag-3 img {
+            border-radius: 3%;
+            width: 100%;
+            height: 50%;
+        }
+
+        #sectionTag-3 h4 {
+            text-align: center;
+        }
+
+        #section-4 {
+            height: 70px;
+            width: 100%;
+            background-color: white;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        #footer {
+            margin-bottom: 10px;
+            background-color: lightgray;
+
+            height: 100px;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        #footer p {
+            text-align: center;
+            color: black;
+            padding-top: 10px;
+            padding-bottom: 5px;
+        }
+
+        #footer a {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <ul class="nav">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#section-2">About Project</a></li>
+                <li><a href="#section-1">Projects</a></li>
+                <li><a href="#section-3">Technologies</a></li>
+                <li><a href="#section-4">Contact us</a></li>
+            </ul>
+        </div>
+
+        <div id="banner">
+            <h1 id="Home">PRACTICAL - 8</h1>
+            <img src="../images/emile-perron-xrVDYZRGdw4-unsplash.jpg" alt="banner">
+        </div>
+        <div id="section-1">Team Members</div>
+        <div id="sectionTag">
+            <div id="firstCircle"><img src="../images/1.png" alt="firstMember"></div>
+            <div id="secCircle"><img src="../images/2.png" alt="secondMember"></div>
+            <div id="thirdCircle"><img src="../images/3.png" alt="thirdMember"></div>
+            <div id="forthCircle"><img src="../images/9.png" alt="forthMember"></div>
+        </div>
+        
+
+        <div style="margin-bottom: 25px; text-align: center; margin-top: 25px;" id="about">
+            <span
+                style="font-size: 50px;color: black;font-family: Arial, Helvetica, sans-serif; font-weight: bold;">About
+                US</span>
+        </div>
+
+        <div class="section-2">
+            <div class="left-side">
+                <h2>About Projects</h2>
+                <br>
+                <div class="main-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis corporis
+                    deleniti voluptatibus, laborum dolor eius ex placeat odio dignissimos, officia maiores eum minus.
+                    Labore nostrum deserunt nam ducimus laborum asperiores doloremque quae animi blanditiis nesciunt
+                    voluptate qui totam adipisci ut aspernatur natus consectetur aliquid odit, id ex itaque! Quisquam
+                    soluta temporibus architecto magnam sunt, .</div>
+            </div>
+            <div class="right-side">
+                <div class="articles" style="background-image: url('../images/p1.jpg');"> Project-1</div>
+                <div class="articles" style="background-image: url('../images/p2.jpeg');">Project-2</div>
+                <div class="articles" style="background-image: url('../images/p3.jpg');">Project-3</div>
+            </div>
+        </div>
+        <div id="section-3">Technologies</div>
+        <div id="sectionTag-3">
+            <div id="block-1">
+                <img src="../images/intro to html.png" alt="html">
+                <h4>Introduction to HTML</h4>
+                <p>HTML stands for Hypertext Markup Language, and it is the most widely used language to write Web
+                    Pages.
+
+                    Hypertext refers to the way in which Web pages (HTML documents) are linked together. Thus, the link
+                    available on a webpage is called Hypertext.
+                </p>
+                <a href="../practical 5/intro_to_html.html" target="_blank">Read More</a>
+
+            </div>
+            <div id="block-2">
+                <img src="../images/introtocss.png" alt="css">
+                <h4>Introduction to CSS</h4>
+                <p>
+                    CSS is short for Cascading Style Sheets, and is the preferred way for setting the look and feel of a
+                    website. Cascading Style Sheets (CSS) is a markup language responsible for how your web pages will
+                    look like. It controls the colors, fonts, and layouts of
+                </p>
+                <a href="../practical 5/intro_to_css.html" target="_blank">Read More</a>
+
+            </div>
+            <div id="block-3">
+                <img src="../images/js.png" alt="JavaScript">
+                <h4>Introduction to JavaScript</h4>
+                <p>
+                    JavaScript was initially created to “make web pages alive”. The programs in this language are called
+                    scripts. It was created in 1995 by Brendan Eich while he was an engineer at Netscape.
+                    Unlike most programming languages, the JavaScript language has no concept
+                </p>
+                <a href="../practical 5/intro_to_js.html" target="_blank">Read More</a>
+
+            </div>
+            <div id="block-4">
+                <img src="../images/bootstrap.jpg" alt="bootstrap">
+                <h4>Introduction to Bootstrap</h4>
+                <p>
+                    Bootstrap is the most popular CSS Framework for developing responsive and mobile-first websites.
+                    Bootstrap 4 is the newest version of Bootstrap.It is the most popular HTML, CSS, and JavaScript
+                    framework for developing responsive, mobile-first web sites.
+
+                </p>
+                <a href="../practical 5/intro_to_bootstrap.html" target="_blank">Read More</a>
+
+            </div>
+        </div>
+        <div id="section-4">Contact Us</div>
+        <div id=footer>
+            <p>Website Template for Practical-8 &copy;<a
+                    href="https://github.com/amanS2206/Full-Stack-Course-Practicals">Aman Saxena</a> </p>
+            <br>
+            <a href="#container">Back to Top</a>
+        </div>
+    </div>
+</body>
+
+</html>
