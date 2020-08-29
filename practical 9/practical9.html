@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Practical-9</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: rgb(223, 223, 223);
+            
+        }
+
+        
+        .header {
+            width: 98%;
+            margin: 0px auto 10px auto;
+            position: sticky;
+            top: 0;
+            background-color: gray;
+            height: 40px;
+        }
+
+        
+        ul {
+            list-style: none;
+            float: right;
+        }
+
+        ul li {
+            display: inline-block;
+            line-height: 40px;
+        }
+
+        ul li a {
+            display: block;
+            color: white;
+            text-transform: uppercase;
+            padding: 0 20px;
+            transition: 0.3s;
+        }
+
+        ul li a:hover {
+            background-color: white;
+            color: black;
+        }
+
+        #sb,
+        #hb {
+            color: #fff;
+            font-size: 30px;
+            line-height: 40px;
+            display: none;
+        }
+
+        #sb:hover,
+        #hb:hover {
+            color: #123455;
+        }
+
+        #sb {
+            float: right;
+            margin-right: 10px;
+        }
+
+        #chk {
+            position: absolute;
+            visibility: hidden;
+            z-index: -10;
+        }
+
+        
+
+        .container {
+            background-color: white;
+            width: 98%;
+            height: auto;
+            margin: 0px auto 10px auto;
+            border: 2px solid rgb(197, 197, 197);
+        }
+
+       
+
+        .banner {
+            background-image: url("../images/emile-perron-xrVDYZRGdw4-unsplash.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 800px;
+            margin: 0 auto 10px auto;
+            font-size: 40px;
+            color: white;
+        }
+
+        
+
+        .section-1 {
+            display: block;
+            width: 1120px;
+            margin: 15px auto;
+        }
+
+        .section-1:after {
+            content: ' ';
+            display: block;
+            clear: both;
+        }
+
+        .circle {
+            float: left;
+            margin: 10px 30px;
+            background-color: rgba(245, 189, 17, 1);
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .img-c {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+        }
+
+        .section-2 {
+            margin-top: 100px;
+            margin-right: 10px;
+            margin-left: 10px;
+            margin-bottom: 150px;
+        }
+
+        .section-2:after {
+            content: ' ';
+            display: block;
+            clear: both;
+        }
+
+        .left-side {
+            width: 50%;
+            background-color: gray;
+            height: 800px;
+            padding: 5px;
+            float: left;
+            font-size: 40px;
+            color: white;
+            overflow: hidden;
+        }
+
+        .right-side {
+            width: 48%;
+            height: 800px;
+            float: right;
+            font-size: 40px;
+            color: black;
+        }
+
+        .articles {
+            height: 263px;
+            width: 100%;
+            margin-bottom: 8px;
+            font-weight: bold;
+            text-align: center;
+            float: right;
+            font-size: 40px;
+            color: black;
+        }
+
+        #a1 {
+            background-image: url('../images/p1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #a2 {
+            background-image: url('../images/p2.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #a3 {
+            background-image: url('../images/p3.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .section-3 {
+            display: block;
+            margin-top: 100px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .section-3::after {
+            content: ' ';
+            display: block;
+            clear: both;
+        }
+
+        .rect {
+            float: left;
+            margin: 20px 15px;
+            background-color: white;
+            width: 20%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .rect img {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+        }
+
+        .rect h4 {
+            text-align: center;
+        }
+
+        .rect p {
+            margin: 10px;
+            font-size: 15px;
+            text-align: justify;
+            line-height: 25px;
+        }
+
+        .rect a {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            color: white;
+            background-color: red;
+            text-decoration: none;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .rect a:hover {
+            background-color: blue;
+        }
+
+        .footer {
+            background-color: lightslategray;
+            height: auto;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            font-size: 30px;
+            color: white;
+        }
+
+        
+
+        @media (min-width: 801px) and (max-width: 1150px) {
+            
+            .banner {
+                background-image: url("../images/emile-perron-xrVDYZRGdw4-unsplash.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 500px;
+                margin: 0 auto 10px auto;
+                font-size: 40px;
+                color: white;
+            }
+
+            
+            .section-1 {
+               
+                width: 765px;
+                margin: 15px auto;
+            }
+
+            .circle {
+                margin-left: 100px;
+            }
+
+           
+            .section-3 {
+                height: auto;
+                width: 765px;
+                margin: 50px auto;
+                display: block;
+            }
+
+            .section-3::after {
+                display: block;
+                contain: ' ';
+                clear: both;
+            }
+
+            .rect {
+                float: left;
+                margin: 20px 35px;
+                background-color: white;
+                width: 35%;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+            }
+
+        }
+
+        
+
+        @media (max-width: 800px) {
+            
+
+            .container {
+                width: 100%;
+                border: none;
+            }
+
+            .header {
+                width: 100%;
+            }
+
+            
+
+            #sb,
+            #hb {
+                display: block;
+            }
+
+            ul {
+                position: fixed;
+                padding: 50px 0;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                
+                color: black;
+                background-color: #454335;
+                text-align: center;
+                transition: .5s;
+                display: block;
+
+            }
+
+            #chk:checked~ul {
+                right: 0;
+                background-color: red;
+
+            }
+
+            .header ul li {
+                display: block;
+                line-height: normal;
+            }
+
+            ul li a {
+                display: block;
+                width: 100%;
+                padding: 20px;
+            }
+
+            ul li a:hover {
+                color: #123455;
+                background-color: #fff;
+            }
+
+            #hb {
+                position: absolute;
+                right: 20px;
+                top: 5px;
+            }
+
+            
+            .banner {
+                background-image: url("Practical-8/emile-perron-xrVDYZRGdw4-unsplash.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 300px;
+                margin: 0 auto 10px auto;
+                color: white;
+            }
+
+            .banner h1 {
+                font-size: 20px;
+            }
+
+            
+            .section-1 {
+                
+                width: 360px;
+                display: block;
+                margin: 15px auto;
+            }
+
+            .circle {
+                margin-left: 70px;
+            }
+
+            
+            .section-2 {
+                margin-top: 100px;
+                margin-right: 10px;
+                margin-left: 10px;
+                margin-bottom: 100px;
+            }
+
+            .section-2:after {
+                content: ' ';
+                display: block;
+                clear: both;
+            }
+
+
+            .left-side {
+                width: 100%;
+                margin-bottom: 10px;
+                background-color: gray;
+                height: 500px;
+                padding: 0;
+                font-size: 30px;
+                color: white;
+                overflow: hidden;
+            }
+
+            .right-side {
+                width: 100%;
+                height: 800px;
+                font-size: 30px;
+                color: black;
+            }
+
+
+            .section-3 {
+                height: auto;
+                width: 365px;
+                margin: 50px auto;
+                display: block;
+            }
+
+            .section-3::after {
+                display: block;
+                contain: ' ';
+                clear: both;
+            }
+
+            .rect {
+                float: left;
+                background-color: white;
+                width: 80%;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+            }
+
+            .footer {
+                margin: 5px;
+                padding: 2px;
+                font-size: 20px;
+            }
+
+        }
+
+        
+        @media (max-width: 355px) {
+
+            .container {
+                min-width: 355px;
+            }
+
+            .header {
+                min-width: 355px;
+            }
+
+            
+            .section-1 {
+                width: 100%;
+                display: block;
+                margin: 50px auto;
+            }
+
+            .circle {
+                margin-left: 60px;
+            }
+
+            .section-3 {
+                height: auto;
+                width: 100%;
+                margin: 50px auto;
+                display: block;
+            }
+
+            .section-3::after {
+                display: block;
+                contain: ' ';
+                clear: both;
+            }
+
+            .rect {
+                float: left;
+                margin: 10px 10px;
+                background-color: white;
+                width: 80%;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header" id="home">
+        <input type="checkbox" id="chk">
+        <label for="chk" id="sb">
+            <i class="fa fa-bars"></i>
+        </label>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#teams">Team</a></li>
+            <li><a href="#tc">Technologies</a></li>
+            <li><a href="#contect">Contact</a></li>
+            <label for="chk" id="hb">
+                <i class="fa fa-times"></i>
+            </label>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="banner">
+            <h1 style="margin: 10px;display: inline;">Practical-8</h1>
+        </div>
+        <div id="teams" style="height: 100px;"></div>
+        <div style="margin-top: 10px; text-align: center;">
+            <h1>Team Members</h1>
+        </div>
+        <div class="section-1">
+            <div class="circle"><img class="img-c" src="../images/1.png" alt=""></div>
+            <div class="circle"><img class="img-c" src="../images/2.png" alt=""></div>
+            <div class="circle"><img class="img-c" src="../images/3.png" alt=""></div>
+            <div class="circle"><img class="img-c" src="../images/9.png" alt=""></div>
+        </div>
+        <div id="about" style="height: 100px;"></div>
+        <div style="text-align: center; ">
+            <h1>About US</h1>
+        </div>
+        <div class="section-2">
+            <div class="left-side">
+                <h2>About Projects</h2>
+                <br>
+                <div class="main-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis corporis
+                    deleniti voluptatibus, laborum dolor eius ex placeat odio dignissimos, officia maiores eum minus.
+                    Labore nostrum deserunt nam ducimus laborum asperiores doloremque quae animi blanditiis nesciunt
+                    voluptate qui totam adipisci ut aspernatur natus consectetur aliquid odit, id ex itaque! Quisquam
+                    soluta temporibus architecto magnam sunt, .</div>
+            </div>
+            <div class="right-side">
+                <div class="articles" id="a1"> Project-1</div>
+                <div class="articles" id="a2">Project-2</div>
+                <div class="articles" id="a3">Project-3</div>
+            </div>
+        </div>
+        <div id="tc" style="height: 100px;"></div>
+        <div style="margin: 10px; text-align: center;">
+            <h1>Technologies Used</h1>
+        </div>
+        <div class="section-3">
+            <div class="rect">
+                <img src="../images/intro to html.png" alt="">
+                <h4>Introduction to HTML</h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ex consequuntur, minima cumque sequi
+                    molestias eum porro. Maiores recusandae natus nobis repellendus minus ullam facere, porro illo? Iure
+                    vitae amet nam veniam non? Suscipit similique maxime deleniti obcaecati recusandae, ipsum, culpa
+                    dignissimos, amet eum dolor earum. Cupiditate tenetur rem error.
+                </p>
+                <a href="../practical 5/intro_to_html.html">Read More</a>
+            </div>
+            <div class="rect">
+                <img src="../images/introtocss.png" alt="">
+                <h4>Introduction to CSS</h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ex consequuntur, minima cumque sequi
+                    molestias eum porro. Maiores recusandae natus nobis repellendus minus ullam facere, porro illo? Iure
+                    vitae amet nam veniam non? Suscipit similique maxime deleniti obcaecati recusandae, ipsum, culpa
+                    dignissimos, amet eum dolor earum. Cupiditate tenetur rem error.
+                </p>
+                <a href="../practical 5/intro_to_css.html">Read More</a>
+            </div>
+            <div class="rect"><img src="../images/js.png" alt="">
+                <h4>Introduction to JavaScript</h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ex consequuntur, minima cumque sequi
+                    molestias eum porro. Maiores recusandae natus nobis repellendus minus ullam facere, porro illo? Iure
+                    vitae amet nam veniam non? Suscipit similique maxime deleniti obcaecati recusandae, ipsum, culpa
+                    dignissimos, amet eum dolor earum. Cupiditate tenetur rem error.
+                </p>
+                <a href="../practical 5/intro_to_js.html">Read More</a>
+            </div>
+            <div class="rect">
+                <img src="../images/bootstrap.jpg" alt="">
+                <h4>Introduction to Bootstrap</h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ex consequuntur, minima cumque sequi
+                    molestias eum porro. Maiores recusandae natus nobis repellendus minus ullam facere, porro illo? Iure
+                    vitae amet nam veniam non? Suscipit similique maxime deleniti obcaecati recusandae, ipsum, culpa
+                    dignissimos, amet eum dolor earum. Cupiditate tenetur rem error.
+                </p>
+                <a href="../practical 5/intro_to_bootstrap.html">Read More</a>
+            </div>
+        </div>
+        <div style="margin: 25px; text-align: center;" id="contect">
+            <h1>Contact</h1>
+        </div>
+        <div class="footer">
+            <p>Website Template for Practical-9 &copy; <a
+                    href="https://github.com/amanS2206">GitHub/amanS2206</a></p>
+            <br>
+            <br>
+            <a href="#home">Back To Top</a>
+        </div>
+
+    </div>
+</body>
+
+</html>
