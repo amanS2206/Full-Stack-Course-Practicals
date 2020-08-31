@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Practical_10_assets/practical_10.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Practical-10</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    width: 100%;
+    height: 70px;
+    background-color: #144273;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: fixed;
+    top: 0;
+}
+
+.header img {
+    width: 70px;
+    height: 70px;
+}
+
+.header h1 {
+    padding-left: 20px;
+    color: #fff;
+    line-height: 70px;
+
+}
+
+.container {
+    width: 100%;
+    padding: 20px;
+    transition: 0.7s;
+}
+
+.container img {
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    margin: auto;
+}
+
+.container p {
+    text-align: justify;
+}
+
+.sidebar {
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    top: 70px;
+    background-color: #144273;
+    left: -100%;
+    transition: 0.7s;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar ul li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 15px 25px;
+    transition: .4s;
+}
+
+.sidebar ul li a i span {
+    padding: 10px;
+    ;
+}
+
+a i {
+    margin-right: 15px;
+}
+
+.sidebar ul li a:hover {
+    border-left: 5px solid #fff;
+}
+
+i {
+    font-size: 30px;
+    color: #fff;
+}
+
+.social {
+    display: flex;
+    margin-top: 300px;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 40px;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding: 0 25px;
+    
+}
+
+.sb,
+.hb {
+    font-size: 30px;
+    color: #fff;
+    position: fixed;
+    top: 20px;
+    left: 35px;
+
+}
+
+.hb {
+    opacity: 0;
+}
+
+#chk:checked~.sidebar {
+    left: 0;
+}
+
+#chk:checked~.sb {
+    opacity: 0;
+}
+
+#chk:checked~.hb {
+    opacity: 1;
+}
+
+#chk:checked~.container {
+    width: 80%;
+    float: right;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header h1 {
+        display: none;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="../images/logo.jpeg" alt="">
+        <h1>FullStack</h1>
+    </div>
+    <input type="checkbox" id="chk">
+    <label for="chk" class="sb">
+        <i class="fa fa-bars"></i>
+    </label>
+    <label for="chk" class="hb">
+        <i class="fa fa-times"></i>
+    </label>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#"><i class="fa fa-home"><span>Home</span></i></a></li>
+            <li><a href="#"><i class="fa fa-user"><span>About</span></i></a></li>
+            <li><a href="#"><i class="fa fa-tasks"><span>Services</span></i></a></li>
+            <li><a href="#"><i class="fa fa-rss"><span>Blog</span></i></a></li>
+            <li><a href="#"><i class="fa fa-id-card"><span>Contact</span></i></a></li>
+        </ul>
+        <div class="social">
+            <a href=""><i class="fa fa-facebook-square"></i></a>
+            <a href=""><i class="fa fa-youtube-square"></i></a>
+            <a href=""><i class="fa fa-instagram"></i></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <img src="../images/emile-perron-xrVDYZRGdw4-unsplash.jpg" alt="">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae reiciendis nesciunt error officia
+            provident,
+            sit odio nobis autem placeat deleniti cupiditate amet sint sunt asperiores rem harum eum at tempora
+            tempore.
+            Repudiandae tempore porro quos, ea quam distinctio quae sequi earum consequuntur suscipit quo, nulla cum
+            quisquam. Voluptatem nostrum eum doloribus eaque molestias numquam ipsa labore sed in ad assumenda,
+            voluptates qui? Tempore officia laborum voluptas velit temporibus modi possimus, tenetur sapiente! Animi
+            eum, quaerat inventore aspernatur laboriosam aliquam necessitatibus laborum, possimus ipsam quisquam,
+            consectetur eos nemo asperiores voluptate distinctio. Libero corporis magnam non doloremque numquam
+            assumenda, corrupti cupiditate quas officia quisquam at autem temporibus, eaque tenetur alias. Nobis
+            architecto voluptatem, nostrum officia quod illo alias ab quaerat veniam nemo quo modi, aliquam enim
+            saepe
+            impedit explicabo tempore sed ad? Nemo corrupti rerum explicabo maxime nihil odio, error tempore
+            dignissimos, totam, id numquam dolor ratione repudiandae omnis eaque sit? Deleniti id, assumenda
+            necessitatibus officia quos odit doloremque quasi delectus aut autem rerum cupiditate quaerat corrupti
+            nulla
+            facere voluptatem iusto recusandae ipsum ea pariatur itaque iste doloribus magni. Omnis libero maxime
+            reiciendis iure ipsa? Illum quas quaerat molestias, excepturi delectus, dolor tempore provident tenetur
+            nihil ut incidunt vel corrupti libero. Architecto, alias deleniti rem tempora minima at! Inventore
+            pariatur
+            veniam eius maxime ratione perferendis. Possimus inventore non odio, eaque hic quia obcaecati nostrum
+            sequi
+            quo ipsam ut doloremque ad quas vero maxime, at laboriosam illum reiciendis unde deserunt dignissimos
+            voluptatum recusandae. Exercitationem fugiat saepe repellendus debitis possimus delectus recusandae
+            temporibus eligendi quia similique, dolore enim doloribus eos placeat, atque tempora nesciunt tempore.
+            Repellat eaque laboriosam minus quas explicabo nostrum eligendi assumenda voluptatibus iure! Corporis
+            modi,
+            possimus voluptatibus voluptate quod, a architecto cumque quia reiciendis ratione iusto voluptates
+            laudantium officiis molestias atque porro, totam asperiores. Corporis consectetur, neque, cumque
+            tempora,
+            quaerat aspernatur nostrum nihil minima assumenda accusamus esse. Eum exercitationem suscipit, in
+            repellendus quae, fugit iusto animi eaque molestias officia esse odio! Iusto tempore natus dignissimos
+            eveniet non reiciendis deleniti ipsa iste explicabo, fuga tenetur doloribus repellendus odio, nesciunt
+            quaerat maxime autem quisquam neque. Fuga vero commodi aliquam similique ullam? Nisi quis debitis earum
+            perspiciatis ex quae velit officiis itaque, voluptatibus laborum reiciendis tenetur incidunt quasi quod
+            aliquam est ducimus, saepe a vero esse nihil nulla obcaecati? Id laborum recusandae quidem dolore, velit
+            quod deleniti aspernatur perspiciatis voluptatum quae, maxime repudiandae possimus vero voluptas nisi
+            sapiente amet voluptatem impedit vitae mollitia accusamus illum at soluta? Adipisci, animi id quis
+            soluta
+            commodi assumenda accusamus iusto tempore quasi consectetur, ratione consequuntur nemo neque ab natus
+            possimus qui suscipit ut vitae? Repudiandae corporis, laudantium fugit iste dolorem quidem quis veniam,
+            adipisci illo, dignissimos hic nam omnis rem perferendis debitis obcaecati dolores? Impedit totam
+            explicabo
+            assumenda ducimus ad quibusdam aut laboriosam deserunt, accusamus esse, cumque magnam unde voluptas
+            animi?
+            Consequatur eum non officia perspiciatis? Corporis sapiente quos consequuntur sint non facere rem quia
+            natus
+            esse officiis voluptatem cum soluta excepturi asperiores id iste illum, nobis blanditiis maxime
+            inventore
+            harum. Cupiditate alias dicta beatae quis quo at!</p>
+    </div>
+
+</body>
+
+</html>
