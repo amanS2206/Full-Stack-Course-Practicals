@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Footer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+       *{
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+           font-family: 'Grandstander', cursive;
+       }
+       .main-content{
+           display: flex;
+           justify-content:center;
+           align-items: center;
+           color: rgb(82, 75, 75);
+           font-size: 40px;
+           width:100%;
+           height: 100px;
+       }
+       footer{
+           width: 100%;
+           background-color: rgb(17, 134, 155);
+       }
+       .sec-1{
+           display: flex;
+           flex-direction: row;
+           justify-content: space-between;
+           padding: 30px 10px;
+       }
+       .sec-1 ul{
+           list-style: none;
+       }
+       .sec-1 ul li{
+           padding: 5px;
+       }
+       a{
+           text-decoration: none;
+           color: black;;
+       }
+       a:hover{
+           color:rgb(194, 255, 80);
+       }
+       .sec-1 h2{
+           color: white;
+           text-transform: uppercase;
+           font-size: 24px;
+       }
+
+       .about{
+           width: 40%;
+       }
+       
+       .about p{
+            text-align: justify;
+            color: black;
+            font-size: 16px;
+            line-height: 24px;
+            margin-top: 10px;
+       }
+       
+       i{
+           color: black;
+           margin-right: 10px;
+       }
+       span{
+           color:  black;
+       }
+       
+       .link1 ul{
+           margin-top: 10px;
+       }
+       .link2 ul{
+           margin-top: 10px;
+       }
+       .link3 ul{
+           margin-top: 10px;
+       }
+       hr {
+           opacity: .2;
+           width: 100%;
+           
+       }
+       .sec-2{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           padding: 25px;
+       }
+       .sec-2 h2{
+           color: black;
+           font-size: 24px;
+       }
+       .sec-2 a{
+           display: inline-block;
+           margin-left: 20px;
+           background-color: red;
+           color: white; 
+           padding:10px 25px;
+           border-radius: 20px;
+       }
+       .sec-2 a:hover{
+           background-color: orange;
+       }
+       .sec-3{
+           display: flex;
+           justify-content: center;
+           padding: 20px;
+       }
+       .sec-3 ul{
+           list-style: none;
+           margin: 20px;
+       }
+       .sec-3 ul li{
+           display: inline-block;
+           width: 60px;
+           height: 60px;
+           padding: 20px;
+           background-color: rgb(49, 38, 38);
+           border-radius: 50%;
+           margin-right: 20px;
+       }
+       .sec-3 ul li i{
+           color: white;
+           font-size: 24px;
+           line-height: 20px;
+           text-align: center;
+       }
+       .sec-3 ul li:nth-child(1):hover{
+           background-color: #3b5999;
+       }
+       .sec-3 ul li:nth-child(2):hover{
+           background-color: #55acee;
+       }
+       .sec-3 ul li:nth-child(3):hover{
+           background-color: #dd4b39;
+       }
+       .sec-3 ul li:nth-child(4):hover{
+           background-color: #0077B5;
+       }
+       .sec-4{
+           display: flex;
+           justify-content: center;
+           text-align:center;
+            background-color: black;
+           padding: 20px;
+           
+       }
+       .sec-4 p{
+           color:gray;
+           position: relative;
+       }
+       .sec-4 p::after{
+           content: '';
+           display: block;
+           width: 0;
+           height: 2px;
+           position: absolute;
+           right: 0;
+           bottom: -10px;
+           background-color: gold;
+           transition: all .3s;
+       }
+       .sec-4 p:hover::after{
+           width: 100%;
+       }
+
+       @media (max-width: 767px){
+        .main-content{
+           display: flex;
+           justify-content:center;
+           align-items: center;
+           color: rgb(82, 75, 75);
+           font-size: 40px;
+           width:100%;
+           height: 100px;
+       }
+       footer{
+           width: 100%;
+           background-color:  rgb(17, 134, 155);;
+       }
+       .sec-1{
+           display: flex;
+           flex-direction: row;
+           flex-wrap: wrap;
+           justify-content: space-between;
+           padding: 30px 10px;
+       }
+       .sec-1 ul{
+           list-style: none;
+       }
+       .sec-1 ul li{
+           padding: 5px;
+       }
+       a{
+           text-decoration: none;
+           color: black;
+       }
+       a:hover{
+           color:coral;
+       }
+       .sec-1 h2{
+           color: white;
+           text-transform: uppercase;
+           font-size: 24px;
+       }
+
+       .about{
+           width: 100%;
+           margin-bottom: 15px;
+       }
+       
+       .about p{
+            text-align: justify;
+            color: black;
+            font-size: 16px;
+            line-height: 24px;
+            margin-top: 10px;
+       }
+       
+       i{
+           color: black;
+           margin-right: 10px;
+       }
+       span{
+           color: black;
+       }
+       
+       .link1 ul{
+           margin-top: 10px;
+       }
+       .link2 ul{
+           margin-top: 10px;
+       }
+       .link3 ul{
+           margin-top: 10px;
+       }
+       hr {
+           width: 100%;
+           opacity: .2;
+       }
+       .sec-2{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           padding: 25px;
+       }
+       .sec-2 h2{
+           color: black;
+           font-size: 24px;
+       }
+       .sec-2 a{
+           display: inline-block;
+           margin-left: 20px;
+           background-color: red;
+           color: white; 
+           padding:10px 25px;
+           border-radius: 20px;
+       }
+       .sec-2 a:hover{
+           background-color: orange;
+       }
+       .sec-3{
+           display: flex;
+           justify-content: center;
+           padding: 20px;
+       }
+       .sec-3 ul{
+           list-style: none;
+           margin: 20px;
+       }
+       .sec-3 ul li{
+           display: inline-block;
+           width: 60px;
+           height: 60px;
+           padding: 20px;
+           background-color: rgb(49, 38, 38);
+           border-radius: 50%;
+           margin-right: 20px;
+       }
+       .sec-3 ul li i{
+           color: white;
+           font-size: 24px;
+           line-height: 20px;
+           text-align: center;
+       }
+       .sec-3 ul li:nth-child(1):hover{
+           background-color: #3b5999;
+       }
+       .sec-3 ul li:nth-child(2):hover{
+           background-color: #55acee;
+       }
+       .sec-3 ul li:nth-child(3):hover{
+           background-color: #dd4b39;
+       }
+       .sec-3 ul li:nth-child(4):hover{
+           background-color: #0077B5;
+       }
+       .sec-4{
+           display: flex;
+           justify-content: center;
+           text-align:center;
+            background-color: black;
+           padding: 20px;
+           
+       }
+       .sec-4 p{
+           color:black;
+           position: relative;
+       }
+       .sec-4 p::after{
+           content: '';
+           display: block;
+           width: 0;
+           height: 2px;
+           position: absolute;
+           right: 0;
+           bottom: -10px;
+           background-color: gold;
+           transition: all .3s;
+       }
+       .sec-4 p:hover::after{
+           width: 100%;
+       }
+
+    }
+
+    @media (max-width: 500px){
+        .main-content{
+           display: flex;
+           justify-content:center;
+           align-items: center;
+           color: rgb(82, 75, 75);
+           font-size: 40px;
+           width:100%;
+           height: 100px;
+       }
+       footer{
+           width: 100%;
+           background-color: rgb(17, 134, 155);
+       }
+       .sec-1{
+           display: flex;
+           flex-direction: column ;
+           justify-content: space-between;
+           padding: 30px 10px;
+       }
+       .sec-1 ul{
+           list-style: none;
+       }
+       .sec-1 ul li{
+           padding: 5px;
+       }
+       a{
+           text-decoration: none;
+           color: black;
+       }
+       a:hover{
+           color:coral;
+       }
+       .sec-1 h2{
+           color: white;
+           text-transform: uppercase;
+           font-size: 24px;
+       }
+
+       .about{
+           width: 100%;
+       }
+       
+       .about p{
+            text-align: justify;
+            color: black;
+            font-size: 16px;
+            line-height: 24px;
+            margin-top: 10px;
+       }
+       
+       i{
+           color: black;
+           margin-right: 10px;
+       }
+       span{
+           color: black;
+       }
+       
+       .link1 ul{
+           margin-top: 10px;
+       }
+       .link2 ul{
+           margin-top: 10px;
+       }
+       .link3 ul{
+           margin-top: 10px;
+       }
+       hr {
+           width: 100%;
+           opacity: .2;
+       }
+       .sec-2{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           padding: 25px;
+       }
+       .sec-2 h2{
+           color: black;
+           font-size: 24px;
+       }
+       .sec-2 a{
+           display: inline-block;
+           margin-left: 20px;
+           background-color: red;
+           color: white; 
+           padding:10px 25px;
+           border-radius: 20px;
+       }
+       .sec-2 a:hover{
+           background-color: orange;
+       }
+       .sec-3{
+           display: flex;
+           justify-content: center;
+           padding: 20px;
+       }
+       .sec-3 ul{
+           list-style: none;
+           margin: 10px;
+       }
+       .sec-3 ul li{
+           display: inline-block;
+           width: 40px;
+           height: 40px;
+           padding: 10px;
+           background-color: rgb(49, 38, 38);
+           border-radius: 50%;
+           margin-right: 10px;
+       }
+       .sec-3 ul li i{
+           color: white;
+           font-size: 20px;
+           line-height: 20px;
+           text-align: center;
+       }
+       .sec-3 ul li:nth-child(1):hover{
+           background-color: #3b5999;
+       }
+       .sec-3 ul li:nth-child(2):hover{
+           background-color: #55acee;
+       }
+       .sec-3 ul li:nth-child(3):hover{
+           background-color: #dd4b39;
+       }
+       .sec-3 ul li:nth-child(4):hover{
+           background-color: #0077B5;
+       }
+       .sec-4{
+           display: flex;
+           justify-content: center;
+           text-align:center;
+            background-color: black;
+           padding: 20px;
+           
+       }
+       .sec-4 p{
+           color:black;
+           position: relative;
+       }
+       .sec-4 p::after{
+           content: '';
+           display: block;
+           width: 0;
+           height: 2px;
+           position: absolute;
+           right: 0;
+           bottom: -10px;
+           background-color: gold;
+           transition: all .3s;
+       }
+       .sec-4 p:hover::after{
+           width: 100%;
+       }
+    }
+    
+    </style>
+</head>
+<body>
+    <section class="main-content">
+        content 
+    </section>
+    <footer>
+        <section class="sec-1">
+            <section class="about">
+                <h2>About</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus praesentium pariatur cum. Et, officiis? Impedit, repellat. Itaque accusantium inventore quas reprehenderit, id sequi minima sit excepturi similique, aperiam veritatis velit quis incidunt autem quo cupiditate! Magni eum totam maxime. Pariatur eligendi odio illum corrupti perferendis quasi reprehenderit facere libero itaque?
+                
+                </p>
+            </section>
+            <section class="link1">
+                <h2>Categories</h2>
+                <ul>
+                    <ul>
+                        <li><a href="#">C</a></li>
+                        <li><a href="#">UI Design</a></li>
+                        <li><a href="#">PHP</a></li>
+                        <li><a href="#">Java</a></li>
+                        <li><a href="#">Android</a></li>
+                        <li><a href="#">Hybrid Apps</a></li>
+                    </ul>
+                </ul>
+            </section>
+            <section class="link2">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Contribute</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                </ul>
+            </section>
+            <section class="link3">
+                <h2>Contact Us</h2>
+                <ul>
+                    <li><i class="fa fa-home"></i><span>Malvi Nagar, New Delhi</span></li>
+                    <li><i class="fa fa-envelope"></i><span>abc@gmail.com</span></li>
+                    <li><i class="fa fa-phone-square"></i><span>Mobile:1236547892</span></li>
+                    <li><a href="#"><i class="fa fa-facebook-official"></i></a><span>abccorp.org.pvt.ltd</span></li>
+                </ul>
+            </section>
+        </section>
+        <hr >
+        <section class="sec-2">
+            <h2>Register For Free</h2>
+            <a href="#">Sign Up!</a>
+        </section>
+        <hr >
+        <section class="sec-3">
+            <ul>
+                <li><a href="#"><i class="fa fa-facebook-official"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                
+            </ul>
+        </section>
+        <section class="sec-4">
+            <p>Copyright &copy; All Rights Reserved by abc Corp </p>
+        </section>
+
+
+
+    </footer>
+</body>
+</html>
