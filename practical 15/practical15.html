@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 15</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        .count{
+            display: flex;
+            flex-direction: row;
+        }
+        .increment{
+            width: 40px;
+            height: 40px;
+            margin-top: 30px;
+           
+        }
+        .decrement{
+            width: 40px;
+            height: 40px;
+            margin-top:30px;
+           
+        }
+        p{
+            margin-left: 50px;
+            margin-right:50px ;
+            font-size: 30px;
+            color: white;
+        }
+    </style>
+</head>
+<body style="background-color: gray;">
+    <h1 class="heading"><strong style="color: yellow;">Counter</strong></h1>
+    <div class="count">
+       
+        <button class="decrement", onclick="decrease()">-</button>
+        <p id="counter"></p>
+        <button class="increment", onclick="increase()">+</button>
+        
+    </div>
+
+    
+</body>
+<script>
+        
+    let count = 0;
+    
+    const para = document.querySelector("#counter");
+    
+    para.textContent = count;
+    
+    function decrease(){
+        if(count<1){
+            document.getElementById("#decrement").disabled=true;
+        }else{
+        
+            count = count -1
+        }
+        
+        para.textContent = count;
+    }
+    function increase(){
+        count = count + 1
+        para.textContent = count;
+    }
+    
+
+</script>
+</html>
