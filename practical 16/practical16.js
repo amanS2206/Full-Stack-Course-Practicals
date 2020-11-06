@@ -9,7 +9,7 @@ function create(e)  {
     
     e.preventDefault();
     if(todoInput.value === ""){
-        alert("Please Enter the Value")
+        alert("Input Field can not be blank ")
         return;
     }
 
