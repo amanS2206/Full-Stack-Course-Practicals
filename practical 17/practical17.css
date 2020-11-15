@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* font-family: 'Fira Sans', sans-serif; */
+    /* font-family: 'Hammersmith One', sans-serif;  */
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+time{
+    font-size: 8rem;
+}
+#greeting{
+    font-size: 2rem;
+}
+#name{
+    font-size: 4rem;
+    opacity: 0.6;
+}
+
+.morning{
+    background: url("Morning1.jpg") bottom center;
+    background-size: cover;    
+    color: white;
+
+}
+.afternoon{
+    background: url("Afternoon.jpg");
+    background-size: cover;
+    color: rgb(116, 7, 7);
+}
+.evening{
+    background: url("Evening.jpg");
+    background-size: cover;
+    color: white;
+}
+.night{
+    background:url("Night.jpg");
+    background-size: cover;
+    color: gold;
+}
