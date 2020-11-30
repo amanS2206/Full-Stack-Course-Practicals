@@ -1,4 +1,3 @@
-//Selectors
 const form = document.getElementById('form');
 const username = document.getElementById('username');
 const email = document.getElementById('email');
@@ -6,15 +5,11 @@ const password1 = document.getElementById('password1');
 const password2 = document.getElementById('password2');
 const small = document.querySelector('small');
 
-//Event Handlers
-
-//form submission
 form.addEventListener('submit', function (e) {
     e.preventDefault();
     checkInput();
 });
 
-//Functions
 function checkInput() {
     const usernameValue = username.value.trim();
     const emailValue = email.value.trim();
